@@ -22,5 +22,7 @@ A aplicação permite explorar os dados de forma simples, visual e dinâmica, fa
 * Tabela com os dados filtrados para análise detalhada.
 
 ---
+🔗 Acesse o dashboard online:
+https://dashboarddedadospython.streamlit.app/
 
 **Projeto desenvolvido com fins educacionais durante a Imersão de Dados com Python da Alura.**
