@@ -47,12 +47,11 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+@st.cache_data
+def carregar_dados():
+    return pd.read_csv("dados_imersao.csv")
 
-
-df = pd.read_csv(
-    "https://raw.githubusercontent.com/vqrca/dashboard_salarios_dados/refs/heads/main/dados-imersao-final.csv"
-)
-
+df = carregar_dados()
 
 # --- Barra Lateral (Filtros) ---
 st.sidebar.header("🔍 Filtros")
