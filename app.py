@@ -53,6 +53,7 @@ def carregar_dados():
 
 df = carregar_dados()
 
+
 # --- Barra Lateral (Filtros) ---
 st.sidebar.header("🔍 Filtros")
 
@@ -65,7 +66,7 @@ senioridades_disponiveis = sorted(df['senioridade'].unique())
 senioridades_selecionadas = st.sidebar.multiselect("Senioridade", senioridades_disponiveis, default=senioridades_disponiveis)
 
 # Filtro por Tipo de Contrato
-contratos_disponiveis = sorted(df['contrato'].unique())
+contratos_disponiveis = sorted(df['emprego'].unique())
 contratos_selecionados = st.sidebar.multiselect("Tipo de Contrato", contratos_disponiveis, default=contratos_disponiveis)
 
 # Filtro por Tamanho da Empresa
@@ -78,7 +79,7 @@ tamanhos_selecionados = st.sidebar.multiselect("Tamanho da Empresa", tamanhos_di
 df_filtrado = df[
     (df['ano'].isin(anos_selecionados)) &
     (df['senioridade'].isin(senioridades_selecionadas)) &
-    (df['contrato'].isin(contratos_selecionados)) &
+    (df['emprego'].isin(contratos_selecionados)) &
     (df['tamanho_empresa'].isin(tamanhos_selecionados))
 ]
 
